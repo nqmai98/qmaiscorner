@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blog cá nhân của Mai</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+</head>
+<body class="w3-sand w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-teal w3-animate-left w3-text-sand w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center" style="font-family: Georgia, 'Times New Roman', Times, serif;"><b>Nguyễn Quỳnh Mai<br>@qmais.corner</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large"  style="font-family: Georgia, 'Times New Roman', Times, serif;">ĐÓNG</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button"  style="font-family: Georgia, 'Times New Roman', Times, serif;">Hành trình</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"  style="font-family: Georgia, 'Times New Roman', Times, serif;">Thông tin</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"  style="font-family: Georgia, 'Times New Roman', Times, serif;">Liên hệ</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-teal w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Nguyễn Quỳnh Mai</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-teal" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="1.jpg" style="width:100%" onclick="onClick(this)" alt="Quỳnh Mai 3 tháng tuổi">
+      <img src="cap3.jpg" style="width:100%" onclick="onClick(this)" alt="Yearbook Dấu 05 - vị trí: Trưởng ban nhân sự">
+      <img src="tet2023.jpg" style="width:100%" onclick="onClick(this)" alt="Tết Quý Mão 2023">
+      <img src="qsu3.jpg" style="width:100%" onclick="onClick(this)" alt="Lớp K26CNCTA tại Sơn Tây">
+    </div>
+
+    <div class="w3-third">
+      <img src="3.jpg" style="width:100%" onclick="onClick(this)" alt="Quỳnh Mai 4 tuổi">
+      <img src="lop cap 3.jpg" style="width:100%" onclick="onClick(this)" alt="Kỷ yếu 8/1 cùng chuyên Địa 20-23">
+      <img src="tet2024.jpg" style="width:100%" onclick="onClick(this)" alt="Tết Giáp Thìn 2024">
+      <img src="qsu1.jpg" style="width:100%" onclick="onClick(this)" alt="Quỳnh Mai tại Sơn Tây">
+    </div>
+
+    <div class="w3-third">
+      <img src="2.jpg" style="width:100%" onclick="onClick(this)" alt="Quỳnh Mai 5 tuổi">
+      <img src="18tuoi.jpg" style="width:100%" onclick="onClick(this)" alt="The 18th QuynhMai">
+      <img src="tet2025.jpg" style="width:100%" onclick="onClick(this)" alt="Tết Ất Tỵ 2025">
+      <img src="qsu2.jpg" style="width:100%" onclick="onClick(this)" alt="Chị em phòng 408">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar" style="color: teal;">
+      <p>°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･</p>
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-teal" style="padding-top:0;font-family:Georgia, 'Times New Roman', Times, serif; color:beige;" onclick="this.style.display='none'">
+    <span class="w3-button w3-tealw3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-sand w3-center w3-text-teal w3-padding-32" id="about">
+    <h4><b>Thông tin</b></h4>
+    <img src="cover.jpg" alt="About @qmais.corner" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px; font-family:'Times New Roman', Times, serif;color: teal;">
+      <h4 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">Nguyễn Quỳnh Mai</h4>
+      <p> Tôi tên là Nguyễn Quỳnh Mai.  tại tôi là sinh viên Học Viện Ngân Hàng. Tôi rất thích đi các concert và festival âm nhạc. Hi vọng trong 
+        tương lai tôi sẽ được đi xem nhiều buổi hoà nhạc nữa. Hiện tại tôi đang học tiếng Hàn để trở thành người giỏi tiếng Việt nhất trong 
+        những người Hàn. Chúc các bạn 1 ngày vui vẻ 🤍<br>
+        <br>
+        <i>[KOREAN BELOW]<br></i>
+        <br>
+        안녕하세요! 저는 응우옌 꾸인 마이입니다. 저는 은행학원 학생입니다. 저는 콘서트와 음악 페스티벌을 가는 것을 정말 좋아합니다. 
+        미래에는 더 많은 공연을 보면 좋겠어요. 저는 한국어를 공부하기 위 해서 한국인들 중에서 베트남어를 제일 잘하는 
+        사람이 되고 싶습니다. 여러분, 좋은 하루 보내세요 🤍
+      </p>
+      <p>Email: mainguyenquynh05@gmail.com</p>
+      <p>Phone number: 037 526 7388</p>
+      <p>Instagram: @qmais.corner</p>
+      <hr class="w3-opacity" style="border: solid teal 1px;">
+      <h4 class="w3-padding-16" style="font-family: 'Times New Roman', Times, serif;font-weight: bold;">Kỹ năng đặc biệt</h4>
+      <p class="w3-wide">Korean Tutor</p>
+      <div class="w3-sand">
+        <div class="w3-container w3-padding-small w3-center w3-teal" style="width:95%">95%</div>
+      </div>
+      <p class="w3-wide">English Tutor</p>
+      <div class="w3-sand">
+        <div class="w3-container w3-padding-small w3-center w3-teal" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Booking Concert Tickets</p>
+      <div class="w3-sand">
+        <div class="w3-container w3-padding-small w3-center w3-teal" style="width:80%">90%</div>
+      </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-sand w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:650px; font-family: 'Times New Roman', Times, serif; color: teal;">
+      <h4 class="w3-center" style="font-family:'Times New Roman', Times, serif;"><b>Liên hệ</b></h4>
+      <p style="font-size: large; font-weight: bold; width: 650px;"><i>Nếu bạn cần người dạy tiếng Hàn/ tiếng Anh cơ bản, hãy liên lạc cho tôi nhé!</i></p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label><b>Họ và Tên:</b></label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label><b>Email</b></label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label><b>Lời nhắn:</b></label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-teal w3-margin-bottom">Gửi</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-sand">  
+    <div class="w3-row-padding">
+      <p style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: larger; font-weight: bold;font-style: italic; color: teal;text-align: center;">𓂃 ོ☼𓂃 Cảm ơn vì đã quan tâm! 𓂃 ོ☼𓂃</p>
+    </div>
+  </footer>
+  
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
